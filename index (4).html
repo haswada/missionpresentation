@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101d35">
+<title>Presenter Mission | P2B Hasanuddin 2027/2028</title>
+<style>
+:root{--navy:#101d35;--navy2:#172b4d;--gold:#d8b56d;--gold2:#f0dba9;--ink:#1c2940;--muted:#69758a;--paper:#f5f7fb;--white:#fff;--line:#e6eaf1;--green:#24856a;--shadow:0 14px 40px rgba(16,29,53,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}.topbar{height:68px;background:rgba(16,29,53,.97);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100vw - 1200px)/2));position:sticky;top:0;z-index:20;box-shadow:0 5px 20px #0b173022}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em;font-size:13px}.brandmark{width:35px;height:35px;border:1px solid var(--gold);border-radius:11px;display:grid;place-items:center;color:var(--gold);font-weight:900;font-size:16px}.brand small{display:block;color:#c4ccda;font-size:10px;font-weight:500;letter-spacing:.12em}.top-actions{display:flex;align-items:center;gap:10px}.pill{border:1px solid #ffffff35;color:#fff;border-radius:30px;padding:7px 12px;font-size:12px}
+.layout{max-width:1200px;margin:auto;padding:26px 22px 70px;display:grid;grid-template-columns:238px minmax(0,1fr);gap:25px}.sidebar{position:sticky;top:90px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:13px;box-shadow:var(--shadow)}.side-label{padding:9px 12px 11px;color:#9aa3b2;font-size:10px;letter-spacing:.16em;font-weight:800}.nav{display:grid;gap:4px}.nav button{border:0;background:transparent;text-align:left;padding:11px 12px;border-radius:12px;color:#526078;display:flex;align-items:center;gap:11px;font-weight:650;font-size:13px;transition:.2s}.nav button:hover{background:#f4f6fa;color:var(--navy)}.nav button.active{background:var(--navy);color:#fff;box-shadow:0 7px 18px #101d3522}.nav .ico{width:22px;text-align:center;font-size:16px}.sidebar-note{margin:15px 5px 4px;padding:13px;background:#fbf7ed;border:1px solid #f0e5c9;border-radius:13px;font-size:11px;color:#76633d}
+main{min-width:0}.view{display:none;animation:fade .25s ease}.view.active{display:block}@keyframes fade{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:none}}
+.hero{background:linear-gradient(125deg,#101d35 0%,#1b3155 68%,#263e62 100%);color:#fff;border-radius:25px;padding:34px;position:relative;overflow:hidden;box-shadow:var(--shadow);min-height:265px}.hero:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #d8b56d45;border-radius:50%;right:-90px;top:-115px;box-shadow:0 0 0 25px #d8b56d0b,0 0 0 55px #d8b56d08}.eyebrow{color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.02;letter-spacing:-.045em;margin:14px 0 12px;max-width:600px}.hero h1 span{color:var(--gold)}.hero p{color:#d4dbea;max-width:560px;margin:0 0 23px}.btn{border:0;border-radius:12px;padding:11px 17px;font-weight:750;font-size:13px;transition:.2s;display:inline-flex;align-items:center;gap:8px}.btn:hover{transform:translateY(-2px)}.btn-gold{background:var(--gold);color:#17233a}.btn-light{background:#fff;color:var(--navy)}.btn-outline{background:transparent;border:1px solid #cfd6e2;color:var(--ink)}.btn-dark{background:var(--navy);color:#fff}.btn-sm{padding:8px 12px;font-size:12px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:27px 0 14px}.section-head h2{margin:0;font-size:22px;letter-spacing:-.03em;color:var(--navy)}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.muted{color:var(--muted)}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:0 5px 18px #172b4d08}.card h3{margin:0 0 7px;color:var(--navy);font-size:16px}.card p{margin:0;color:var(--muted);font-size:13px}.stat{font-size:28px;font-weight:850;color:var(--navy);letter-spacing:-.04em}.stat-label{font-size:11px;color:var(--muted);font-weight:650}.stat-card{display:flex;align-items:center;justify-content:space-between}.stat-icon{width:42px;height:42px;border-radius:14px;background:#fbf5e8;display:grid;place-items:center;font-size:19px}
+.progress-track{height:8px;background:#edf0f5;border-radius:20px;overflow:hidden;margin:12px 0 7px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),#b88d3e);border-radius:20px;transition:width .3s}.progress-meta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.quote{border-left:3px solid var(--gold);padding:13px 16px;background:#fbf8f0;border-radius:0 13px 13px 0;color:#645538;font-size:14px;margin-top:14px}.tag{display:inline-flex;background:#f2f4f8;color:#657189;padding:4px 9px;border-radius:30px;font-size:10px;font-weight:800;letter-spacing:.04em}.tag.gold{background:#fbf4e5;color:#8c6b2e}
+.menu-card{display:flex;gap:13px;align-items:flex-start;cursor:pointer;transition:.2s}.menu-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.menu-icon{width:43px;height:43px;flex:0 0 43px;border-radius:14px;background:#f8f3e8;display:grid;place-items:center;font-size:20px}.menu-card h3{font-size:14px;margin:1px 0 4px}.menu-card p{font-size:12px}
+.page-title{margin:6px 0 4px;font-size:30px;letter-spacing:-.04em;color:var(--navy)}.page-sub{margin:0 0 22px;color:var(--muted);font-size:14px}.accordion{display:grid;gap:10px}.acc{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden}.acc-head{width:100%;border:0;background:#fff;padding:15px 17px;text-align:left;display:flex;justify-content:space-between;align-items:center;color:var(--navy);font-weight:750}.acc-body{display:none;padding:0 17px 16px;color:#59667c;font-size:13px}.acc.open .acc-body{display:block}.acc-body ul{padding-left:19px;margin:7px 0}.acc-body li{margin:5px 0}.role{border-top:3px solid var(--gold)}.role .tag{margin-bottom:10px}
+.check-list{display:grid;gap:8px}.check-row{display:flex;gap:11px;align-items:flex-start;background:#fff;border:1px solid var(--line);padding:12px 13px;border-radius:12px;font-size:13px}.check-row input{accent-color:var(--green);width:17px;height:17px;margin:2px 0 0;flex:0 0 auto}.check-row.done span{text-decoration:line-through;color:#98a1af}.check-group{margin-bottom:18px}.check-group h3{font-size:15px;color:var(--navy);margin:0 0 9px}.two-col{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:15px}.sticky-card{position:sticky;top:90px;align-self:start}
+.field{display:grid;gap:5px;margin:11px 0}.field label{font-size:12px;font-weight:750;color:#4c5970}.field input,.field textarea,.field select{width:100%;border:1px solid #dfe4ec;border-radius:10px;padding:10px 11px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field textarea:focus{border-color:#b58b42;box-shadow:0 0 0 3px #d8b56d25}.field textarea{min-height:75px;resize:vertical}.report-output{white-space:pre-wrap;background:#f7f8fb;border:1px dashed #cbd3df;padding:15px;border-radius:12px;font-size:12px;color:#344158;min-height:120px}.field-help{display:block;color:var(--muted);font-size:11px;line-height:1.45}.field input[readonly]{background:#f7f8fb;color:var(--navy);font-weight:750}.report-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.report-output{overflow-wrap:anywhere;line-height:1.65}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.tab{border:1px solid var(--line);background:#fff;border-radius:30px;padding:8px 13px;font-size:12px;font-weight:700;color:#66738a}.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.stepbox{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;min-height:190px}.step-number{font-size:11px;letter-spacing:.12em;color:#a17b37;font-weight:850}.stepbox h3{font-size:21px;color:var(--navy);margin:8px 0}.stepbox p{color:var(--muted);font-size:14px}.step-controls{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.tip{padding:14px 16px;border-radius:14px;background:#eef4f8;color:#415a70;font-size:12px;margin-top:13px}
+.footer{margin-top:28px;text-align:center;color:#9aa3b2;font-size:11px}.mobile-nav{display:none}
+@media(max-width:850px){.layout{grid-template-columns:1fr;padding:17px 14px 90px}.sidebar{display:none}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:7px 5px calc(7px + env(safe-area-inset-bottom));justify-content:space-around;box-shadow:0 -6px 22px #15233a10}.mobile-nav button{border:0;background:transparent;color:#738097;font-size:10px;display:grid;justify-items:center;gap:2px;padding:4px 5px}.mobile-nav button span:first-child{font-size:18px}.mobile-nav button.active{color:var(--navy);font-weight:850}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}.sticky-card{position:static}.topbar{padding:0 14px}.hero{padding:25px 22px}.hero h1{font-size:40px}}
+@media(max-width:520px){.grid2,.grid3{grid-template-columns:1fr}.top-actions .pill{display:none}.section-head h2{font-size:19px}.page-title{font-size:26px}.card{padding:16px}.hero{min-height:0}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+ <div class="brand"><div class="brandmark">H</div><div>HASWADA <small>P2B • TP 2027/2028</small></div></div>
+ <div class="top-actions"><span class="pill">PUSAT BRIEFING DIGITAL</span><span class="pill">✦ PRESENTER MISSION</span></div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+ <div class="side-label">MENU UTAMA</div>
+ <nav class="nav" id="sideNav">
+  <button class="active" data-view="home"><span class="ico">⌂</span>Beranda</button>
+  <button data-view="roles"><span class="ico">♧</span>Tugas & Peran</button>
+  <button data-view="prepare"><span class="ico">✓</span>Persiapan</button>
+  <button data-view="run"><span class="ico">▣</span>Pelaksanaan</button>
+  <button data-view="scripts"><span class="ico">☷</span>Kalimat Presenter</button>
+  <button data-view="practice"><span class="ico">◉</span>Simulasi</button>
+  <button data-view="checklist"><span class="ico">☑</span>Checklist Misi</button>
+  <button data-view="report"><span class="ico">▤</span>Laporan Kunjungan</button>
+ </nav>
+ <div class="sidebar-note"><b>Ingat misi kita</b><br>Datang dengan persiapan, tampil dengan percaya diri, pulang membawa hasil.</div>
+</aside>
+<main>
+<section class="view active" id="home">
+ <div class="hero">
+  <div class="eyebrow">P2B HASANUDDIN • TAHUN PELAJARAN 2027/2028</div>
+  <h1>PRESENTER<br><span>MISSION.</span></h1>
+  <p>Setiap kunjungan adalah kesempatan memperkenalkan Hasanuddin. Persiapkan diri, bangun suasana, sampaikan dengan percaya diri, dan tinggalkan kesan baik.</p>
+  <div class="hero-actions"><button class="btn btn-gold" onclick="showView('prepare')">Mulai persiapan <span>→</span></button><button class="btn btn-light" onclick="showView('practice')">Latihan presenter</button></div>
+ </div>
+ <div class="section-head"><div><h2>Selamat bertugas, Tim Presenter!</h2><p>Gunakan panduan ini dari sebelum berangkat hingga laporan selesai.</p></div><span class="tag gold">SATU TIM • SATU MISI</span></div>
+ <div class="grid3">
+  <div class="card stat-card"><div><div class="stat" id="homeProgress">0%</div><div class="stat-label">Checklist selesai</div></div><div class="stat-icon">☑</div></div>
+  <div class="card stat-card"><div><div class="stat">8</div><div class="stat-label">Menu panduan</div></div><div class="stat-icon">▦</div></div>
+  <div class="card stat-card"><div><div class="stat">1</div><div class="stat-label">Tujuan bersama</div></div><div class="stat-icon">✦</div></div>
+ </div>
+ <div class="card" style="margin-top:14px"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><b style="color:var(--navy)">Progress kesiapan misi</b><span class="tag" id="homeCount">0 tugas selesai</span></div><div class="progress-track"><div class="progress-fill" id="homeBar"></div></div><div class="progress-meta"><span>Terus lengkapi persiapan dan tugas</span><span id="homePct">0%</span></div></div>
+ <div class="quote">“Kita tidak hanya datang untuk memperkenalkan sekolah. Kita hadir untuk membangun kepercayaan, menunjukkan pengalaman belajar, dan membuka peluang masa depan bagi para siswa.”</div>
+ <div class="section-head"><div><h2>Jelajahi pusat briefing</h2><p>Pilih menu sesuai kebutuhanmu.</p></div></div>
+ <div class="grid2">
+  <div class="card menu-card" onclick="showView('roles')"><div class="menu-icon">♧</div><div><h3>Kenali tugas dan peran</h3><p>Ketahui tanggung jawab masing-masing anggota tim.</p></div></div>
+  <div class="card menu-card" onclick="showView('prepare')"><div class="menu-icon">✓</div><div><h3>Siapkan keberangkatan</h3><p>Pastikan dokumen dan perlengkapan lengkap.</p></div></div>
+  <div class="card menu-card" onclick="showView('scripts')"><div class="menu-icon">☷</div><div><h3>Pelajari kalimat presenter</h3><p>Gunakan contoh kalimat sebagai panduan.</p></div></div>
+  <div class="card menu-card" onclick="showView('report')"><div class="menu-icon">▤</div><div><h3>Buat laporan kunjungan</h3><p>Susun laporan ringkas untuk grup WhatsApp P2B.</p></div></div>
+ </div>
+ <div class="footer">PESANTREN TERPADU DARUL IHSAN • SMP–SMA HASANUDDIN</div>
+</section>
+
+<section class="view" id="roles">
+ <h1 class="page-title">Tugas & Tanggung Jawab</h1><p class="page-sub">Semua anggota memiliki peran. Koordinasi yang baik membuat kegiatan berjalan tertib.</p>
+ <div class="grid2">
+  <div class="card role"><span class="tag gold">KOORDINATOR PRESENTER</span><h3>Bu Indah & Ustazah Ina</h3><p>Mengarahkan kesiapan tim dan memastikan seluruh petugas memahami tugasnya.</p><ul><li>Mengingatkan jadwal dan kesiapan keberangkatan.</li><li>Memastikan BESDI menyiapkan surat izin satu jam sebelum berangkat.</li><li>Mengecek kesiapan guru presenter dan perlengkapan.</li><li>Menghubungi anggota tim jika ada yang belum siap.</li><li>Mengarahkan evaluasi setelah kegiatan bila diperlukan.</li></ul></div>
+  <div class="card role"><span class="tag">PRESENTER BESDI / OSIS</span><h3>Tim pembuka suasana</h3><p>Menjadi wajah ramah dan energik yang membangun kedekatan dengan siswa.</p><ul><li>Membuat surat izin satu jam sebelum keberangkatan.</li><li>Membantu menyiapkan dan membawa perlengkapan.</li><li>Menata laptop, proyektor, dan speaker di lokasi.</li><li>Membuka acara, memperkenalkan diri, ice breaking, dan memutar video.</li><li>Memandu pengisian angket, membantu dokumentasi, dan merapikan alat.</li><li>Mengembalikan perlengkapan dan menyerahkan angket ke TU.</li></ul></div>
+  <div class="card role"><span class="tag">GURU PRESENTER</span><h3>Penyampai informasi utama</h3><p>Menyampaikan informasi sekolah secara jelas, akurat, dan mudah dipahami.</p><ul><li>Berkoordinasi dengan koordinator sebelum keberangkatan.</li><li>Melapor ke kantor sekolah tujuan dan meminta izin.</li><li>Menjelaskan biaya pendidikan, beasiswa, serta keunggulan SMP/SMA.</li><li>Mendampingi siswa saat mengisi angket.</li><li>Mencatat siswa peringkat 1, 2, dan 3 untuk jenjang SMP.</li><li>Menyampaikan hasil kegiatan ke grup WhatsApp P2B.</li></ul></div>
+  <div class="card role"><span class="tag gold">SELURUH TIM</span><h3>Satu tim, satu sikap</h3><p>Menjaga nama baik Hasanuddin dalam setiap interaksi.</p><ul><li>Berpakaian rapi dan menjaga sopan santun.</li><li>Disiplin waktu dan mengikuti arahan koordinator.</li><li>Saling membantu, tidak berjalan sendiri-sendiri.</li><li>Menghargai guru dan siswa di sekolah tujuan.</li><li>Menjaga kebersihan serta memastikan tidak ada alat tertinggal.</li></ul></div>
+ </div>
+ <div class="tip">Catatan: pembagian teknis dapat disesuaikan dengan jumlah anggota tim dan kondisi sekolah yang dikunjungi.</div>
+</section>
+
+<section class="view" id="prepare">
+ <h1 class="page-title">Persiapan Sebelum Berangkat</h1><p class="page-sub">Jangan menunggu tiba di lokasi untuk menyadari ada perlengkapan yang tertinggal.</p>
+ <div class="section-head"><div><h2>Alur persiapan</h2><p>Ikuti urutan berikut sebelum tim berangkat.</p></div></div>
+ <div class="accordion">
+  <div class="acc open"><button class="acc-head" onclick="toggleAcc(this)">01 • Koordinasi dan izin keberangkatan <span>＋</span></button><div class="acc-body"><ul><li>Koordinator mengingatkan jadwal, lokasi, dan anggota tim.</li><li>Petugas BESDI membuat surat izin satu jam sebelum berangkat.</li><li>Guru presenter memastikan kesiapan dan materi yang akan disampaikan.</li><li>Jika ada petugas yang belum siap, segera hubungi koordinator.</li></ul></div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">02 • Perlengkapan presentasi <span>＋</span></button><div class="acc-body"><ul><li>Laptop dan charger.</li><li>Proyektor dan kabel daya.</li><li>Speaker dan kabel audio.</li><li>Kabel HDMI/VGA atau adaptor yang sesuai.</li><li>Terminal listrik/stop kontak tambahan bila tersedia.</li><li>Pastikan video, suara, dan tampilan presentasi dapat digunakan.</li></ul></div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">03 • Dokumen dan bahan promosi <span>＋</span></button><div class="acc-body"><ul><li>Surat izin / surat tugas yang diperlukan.</li><li>SPPD.</li><li>Flyer P2B.</li><li>Angket siswa dalam jumlah cukup.</li><li>Alat tulis dan daftar kebutuhan pendataan.</li><li>Cendera mata untuk diserahkan saat berpamitan.</li></ul></div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">04 • Pemeriksaan terakhir <span>＋</span></button><div class="acc-body"><ul><li>Pastikan seluruh anggota mengetahui lokasi dan waktu keberangkatan.</li><li>Periksa kembali fungsi laptop, proyektor, dan speaker.</li><li>Pastikan file presentasi dan video tersedia.</li><li>Hitung angket dan flyer.</li><li>Pastikan semua barang sudah masuk kendaraan sebelum berangkat.</li></ul></div></div>
+ </div>
+ <div class="tip"><b>Prinsip:</b> satu set perlengkapan harus diperiksa bersama, bukan hanya diasumsikan sudah disiapkan.</div>
+</section>
+
+<section class="view" id="run">
+ <h1 class="page-title">Panduan Pelaksanaan</h1><p class="page-sub">Ikuti alur kegiatan agar kunjungan tertib, menarik, dan meninggalkan kesan baik.</p>
+ <div class="accordion">
+  <div class="acc open"><button class="acc-head" onclick="toggleAcc(this)">01 • Tiba dan meminta izin <span>＋</span></button><div class="acc-body">Guru presenter menuju kantor sekolah, memperkenalkan diri, menyampaikan maksud kunjungan, dan meminta izin kepada pihak sekolah. Sampaikan dengan ramah dan singkat.</div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">02 • Menyiapkan tempat <span>＋</span></button><div class="acc-body">Tim BESDI menata laptop, proyektor, dan speaker di aula atau ruang kelas. Pastikan posisi layar terlihat dan suara terdengar oleh siswa.</div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">03 • Pembukaan dan ice breaking <span>＋</span></button><div class="acc-body">Presenter BESDI membuka kegiatan, memperkenalkan diri, menyapa siswa, lalu mengajak mereka mengikuti ice breaking singkat agar suasana lebih cair.</div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">04 • Video dan pengenalan Hasanuddin <span>＋</span></button><div class="acc-body">Putar video pengenalan sekolah. Presenter BESDI dapat memberi pengantar singkat sebelum video dan menghubungkan isi video dengan pengalaman belajar di Hasanuddin.</div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">05 • Penyampaian materi oleh guru <span>＋</span></button><div class="acc-body">Guru menjelaskan keunggulan sekolah, biaya pendidikan, informasi beasiswa, serta informasi SMP/SMA sesuai sasaran kunjungan. Gunakan bahasa sederhana, jelas, dan tidak berlebihan.</div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">06 • Pengisian angket dan pendataan <span>＋</span></button><div class="acc-body">Arahkan seluruh siswa mengisi angket. Pastikan petunjuk dipahami, jawaban terisi dengan baik, dan angket terkumpul. Untuk kunjungan SMP, guru mencatat siswa dengan peringkat 1, 2, dan 3.</div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">07 • Apresiasi dan penutupan <span>＋</span></button><div class="acc-body">Berikan hadiah kepada siswa yang menjawab pertanyaan menarik. Tutup dengan ucapan terima kasih, ajakan mengenal Hasanuddin lebih lanjut, dan foto bersama jika diizinkan.</div></div>
+  <div class="acc"><button class="acc-head" onclick="toggleAcc(this)">08 • Berpamitan dan kembali <span>＋</span></button><div class="acc-body">Tim berpamitan ke kantor sekolah dan menyerahkan cendera mata. Setelah kembali, BESDI mengembalikan perlengkapan dan menyerahkan angket ke TU. Guru presenter mengirim laporan kegiatan ke grup WhatsApp P2B.</div></div>
+ </div>
+</section>
+
+<section class="view" id="scripts">
+ <h1 class="page-title">Panduan Kalimat Presenter</h1><p class="page-sub">Contoh kalimat berikut dapat disesuaikan dengan situasi. Sampaikan secara alami, jangan sekadar membaca.</p>
+ <div class="tabs" id="scriptTabs">
+  <button class="tab active" data-script="besdi">Presenter BESDI</button><button class="tab" data-script="guru">Guru Presenter</button><button class="tab" data-script="angket">Ajakan & penutupan</button>
+ </div>
+ <div id="scriptContent"></div>
+ <div class="tip">Tips: pahami inti pesannya, tatap audiens, gunakan suara yang jelas, dan jangan takut tersenyum.</div>
+</section>
+
+<section class="view" id="practice">
+ <h1 class="page-title">Simulasi Presenter</h1><p class="page-sub">Latihan singkat sebelum bertugas. Baca situasi, pahami tujuan, lalu coba ucapkan dengan bahasamu sendiri.</p>
+ <div class="card" style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;gap:10px"><b style="color:var(--navy)">Latihan 5 tahap</b><span class="tag gold" id="practiceCount">Tahap 1 dari 5</span></div><div class="progress-track"><div class="progress-fill" id="practiceBar" style="width:20%"></div></div></div>
+ <div class="stepbox"><div class="step-number" id="practiceLabel">TAHAP 01</div><h3 id="practiceTitle">Pembukaan</h3><p id="practiceDesc"></p><div class="quote" id="practiceExample"></div><div class="step-controls"><button class="btn btn-outline btn-sm" id="prevStep" onclick="changePractice(-1)">← Sebelumnya</button><button class="btn btn-dark btn-sm" id="nextStep" onclick="changePractice(1)">Berikutnya →</button></div></div>
+ <div class="tip"><b>Tantangan latihan:</b> coba sampaikan contoh kalimat tanpa melihat layar. Ulangi sampai terdengar lancar dan percaya diri.</div>
+</section>
+
+<section class="view" id="checklist">
+ <h1 class="page-title">Checklist Misi Presenter</h1><p class="page-sub">Centang setiap tugas ketika sudah dilakukan. Progres tersimpan pada browser/perangkat yang digunakan.</p>
+ <div class="two-col"><div class="card">
+  <div class="check-group"><h3>① Sebelum berangkat</h3><div class="check-list" id="checks-before"></div></div>
+  <div class="check-group"><h3>② Saat tiba di sekolah</h3><div class="check-list" id="checks-arrive"></div></div>
+  <div class="check-group"><h3>③ Saat presentasi</h3><div class="check-list" id="checks-present"></div></div>
+  <div class="check-group"><h3>④ Setelah presentasi</h3><div class="check-list" id="checks-after"></div></div>
+  <div class="check-group"><h3>⑤ Setelah kembali</h3><div class="check-list" id="checks-return"></div></div>
+ </div><div class="card sticky-card"><span class="tag gold">PROGRESS MISI</span><div class="stat" id="checkPercent" style="font-size:42px;margin-top:9px">0%</div><div class="progress-track"><div class="progress-fill" id="checkBar"></div></div><div class="progress-meta"><span id="checkDone">0 selesai</span><span id="checkTotal">0 tugas</span></div><p style="font-size:12px;margin:17px 0;color:var(--muted)">Checklist ini tersimpan secara lokal di browser perangkat ini, bukan tersinkron otomatis ke perangkat anggota tim lain.</p><button class="btn btn-outline btn-sm" onclick="resetChecks()">↻ Reset checklist</button></div></div>
+</section>
+
+<section class="view" id="report">
+ <h1 class="page-title">Laporan Hasil Kunjungan</h1><p class="page-sub">Isi data kunjungan, susun laporan, lalu bagikan langsung ke grup WhatsApp P2B.</p>
+ <div class="two-col"><div class="card">
+  <div class="field"><label for="rSchool">Nama sekolah tujuan</label><input id="rSchool" type="text" placeholder="Contoh: SDN 4 Wajak" autocomplete="organization" required></div>
+  <div class="field"><label for="rLevel">Jenjang sekolah tujuan</label><select id="rLevel"><option value="SD/MI">SD/MI</option><option value="SMP/MTs">SMP/MTs</option></select><small class="field-help">Pilihan jenjang menentukan jumlah nama siswa berprestasi yang ditampilkan.</small></div>
+  <div class="field"><label for="rDate">Tanggal kunjungan</label><input id="rDate" type="date" required></div>
+  <div class="grid2">
+   <div class="field"><label for="rPresent">Jumlah siswa hadir</label><input id="rPresent" type="number" min="0" step="1" inputmode="numeric" placeholder="0" required></div>
+   <div class="field"><label for="rAbsent">Jumlah siswa yang tidak hadir</label><input id="rAbsent" type="number" min="0" step="1" inputmode="numeric" placeholder="0" required></div>
+  </div>
+  <div class="field"><label>Jumlah siswa keseluruhan</label><input id="rTotal" type="text" value="0 siswa" readonly aria-live="polite"><small class="field-help">Dihitung otomatis dari jumlah siswa hadir + tidak hadir.</small></div>
+  <div class="field"><label for="rInterested">Jumlah siswa yang berminat berdasarkan angket</label><input id="rInterested" type="number" min="0" step="1" inputmode="numeric" placeholder="0" required></div>
+  <div class="field"><label for="rAchieve">Nama siswa berprestasi</label><textarea id="rAchieve" placeholder="SD/MI: tuliskan nama siswa peringkat 1, 2, dan 3. SMP/MTs: tuliskan nama siswa peringkat 1 saja."></textarea><small class="field-help">Isi berdasarkan informasi yang diperoleh saat kunjungan. Bagian ini tidak wajib jika informasi prestasi siswa tidak diperoleh.</small></div>
+  <div class="field"><label for="rNotes">Catatan hasil kunjungan</label><textarea id="rNotes" placeholder="Tuliskan respons siswa, antusiasme, tanggapan pihak sekolah, atau hal penting yang benar-benar ditemukan."></textarea><small class="field-help">Panduan: jelaskan bagaimana presentasi berlangsung dan bagaimana respons siswa maupun pihak sekolah. Kolom ini diisi manual.</small></div>
+  <div class="field"><label for="rFollow">Kendala dan tindak lanjut</label><textarea id="rFollow" placeholder="Tuliskan kendala yang terjadi dan langkah tindak lanjut yang perlu dilakukan."></textarea><small class="field-help">Panduan: sebutkan kendala yang benar-benar terjadi, pihak yang perlu dihubungi, atau langkah berikutnya. Jika tidak ada kendala, tuliskan sesuai kondisi sebenarnya.</small></div>
+  <div class="report-actions"><button class="btn btn-dark" type="button" onclick="makeReport()">Susun laporan</button><button class="btn btn-outline" type="button" onclick="resetReport()">↻ Reset formulir</button></div>
+ </div><div class="card sticky-card"><span class="tag gold">HASIL LAPORAN</span><h3 style="margin-top:10px">Siap dikirim ke WhatsApp</h3><div class="report-output" id="reportOutput" aria-live="polite">Laporan akan muncul di sini setelah data diisi dan tombol “Susun laporan” ditekan.</div><button class="btn btn-gold" style="margin-top:12px;width:100%;justify-content:center" type="button" onclick="shareReport()">Bagikan ke Grup WhatsApp</button><p id="copyStatus" class="muted" style="font-size:11px;margin-top:8px" aria-live="polite">Setelah laporan disusun, tekan tombol untuk membagikannya. Pilih grup P2B di WhatsApp, lalu tekan Kirim.</p></div></div>
+ <div class="tip">Periksa kembali data dan isi catatan berdasarkan kondisi sebenarnya. Tombol berbagi akan membuka pilihan WhatsApp; pilih grup P2B dan tekan Kirim.</div>
+</section>
+</main>
+</div>
+<nav class="mobile-nav" id="mobileNav">
+ <button class="active" data-view="home"><span>⌂</span>Beranda</button><button data-view="prepare"><span>✓</span>Persiapan</button><button data-view="run"><span>▣</span>Jalankan</button><button data-view="checklist"><span>☑</span>Checklist</button><button data-view="report"><span>▤</span>Laporan</button>
+</nav>
+</div>
+<script>
+const views=[...document.querySelectorAll('.view')];
+function showView(id){views.forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===id));window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.view)));
+function toggleAcc(btn){btn.parentElement.classList.toggle('open')}
+const scripts={
+besdi:[
+['Pembukaan','Menyapa siswa dengan ramah dan memperkenalkan tim.','Assalamu’alaikum warahmatullahi wabarakatuh. Selamat pagi teman-teman! Apa kabar semuanya? Perkenalkan, kami dari SMP–SMA Hasanuddin. Hari ini kami ingin berbagi cerita tentang sekolah kami. Semoga teman-teman bisa mengikuti kegiatan ini dengan senang hati.'],
+['Perkenalan','Membangun kedekatan dan membuat suasana nyaman.','Sebelum mulai, boleh kami kenalan dulu? Nama saya ... dan teman-teman yang hadir bersama saya adalah ... Nanti kita akan melihat video singkat dan berbagi cerita. Kalau ada yang ingin ditanyakan, jangan sungkan, ya!'],
+['Ice breaking','Mencairkan suasana tanpa membuat siswa merasa terpaksa.','Sebelum lanjut, kita pemanasan sebentar, yuk! Kalau saya bilang “Hasanuddin”, teman-teman jawab “Terdepan dan Berprestasi!” Kita coba bersama-sama, ya. Siap?'],
+['Pengantar video','Mengajak siswa memperhatikan video.','Sekarang kita akan melihat video singkat tentang kegiatan dan suasana belajar di Hasanuddin. Coba perhatikan, siapa tahu ada kegiatan yang menarik dan ingin teman-teman ketahui lebih lanjut.']
+],
+guru:[
+['Memperkenalkan sekolah','Menyampaikan gambaran sekolah dengan bahasa sederhana.','Anak-anak, SMP–SMA Hasanuddin merupakan tempat belajar dan bertumbuh. Di sini siswa tidak hanya belajar pelajaran di kelas, tetapi juga dibimbing untuk mandiri, disiplin, percaya diri, mengembangkan kemampuan, dan membiasakan nilai-nilai agama.'],
+['Keunggulan sekolah','Menjelaskan hal yang membedakan pengalaman belajar.','Di Hasanuddin, anak-anak mendapatkan pendampingan belajar, pembiasaan ibadah, kegiatan kepemimpinan, keterampilan, serta pembelajaran Bahasa Inggris. Kami juga memiliki lingkungan pesantren terpadu dan berbagai kegiatan yang membantu siswa berkembang.'],
+['Biaya dan beasiswa','Memberi informasi secara jelas dan tidak menjanjikan hal yang belum pasti.','Untuk informasi biaya pendidikan dan beasiswa, kami akan menjelaskan sesuai ketentuan yang berlaku. Jika Bapak/Ibu atau anak-anak membutuhkan penjelasan lebih lanjut, silakan menghubungi panitia P2B Hasanuddin.'],
+['Sesi tanya jawab','Membuka ruang pertanyaan dengan nyaman.','Sampai di sini, apakah ada yang ingin ditanyakan? Tidak perlu malu untuk bertanya. Kami akan berusaha menjelaskan sejelas mungkin. Jika ada hal yang perlu kami pastikan terlebih dahulu, akan kami sampaikan melalui panitia.']
+],
+angket:[
+['Mengajak mengisi angket','Menerangkan tujuan angket secara singkat.','Sebelum kegiatan kita akhiri, kami mohon teman-teman mengisi angket yang dibagikan. Isilah sesuai keadaan dan pilihan masing-masing. Tidak perlu terburu-buru. Jika ada bagian yang belum dipahami, silakan bertanya kepada kami.'],
+['Memberi apresiasi','Menghargai partisipasi siswa.','Terima kasih untuk teman-teman yang sudah aktif mengikuti kegiatan. Kami akan memberikan apresiasi kecil kepada beberapa teman yang berani menjawab pertanyaan. Yang terpenting bukan hadiahnya, tetapi keberanian untuk mencoba.'],
+['Penutupan','Mengakhiri kegiatan dengan hangat dan sopan.','Terima kasih atas waktu dan perhatian Bapak/Ibu guru serta teman-teman semua. Semoga perkenalan singkat ini bermanfaat. Kami senang bisa berkunjung ke sekolah ini. Sampai bertemu lagi, dan jangan ragu mengenal SMP–SMA Hasanuddin lebih dekat. Wassalamu’alaikum warahmatullahi wabarakatuh.'],
+['Berpamitan di kantor','Menutup kunjungan dengan menghormati pihak sekolah.','Terima kasih atas kesempatan dan sambutan yang diberikan kepada kami. Mohon maaf apabila selama kegiatan ada kekurangan. Semoga silaturahmi dan kerja sama ini dapat terus terjalin.']
+]};
+function renderScripts(key){const box=document.getElementById('scriptContent');box.innerHTML='<div class="accordion">'+scripts[key].map((s,i)=>`<div class="acc ${i===0?'open':''}"><button class="acc-head" onclick="toggleAcc(this)">${String(i+1).padStart(2,'0')} • ${s[0]} <span>＋</span></button><div class="acc-body"><p>${s[1]}</p><div class="quote">${s[2]}</div><button class="btn btn-outline btn-sm" style="margin-top:10px" onclick="copyText(${JSON.stringify(s[2])})">Salin contoh kalimat</button></div></div>`).join('')+'</div>'}
+document.querySelectorAll('[data-script]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-script]').forEach(x=>x.classList.toggle('active',x===b));renderScripts(b.dataset.script)}));renderScripts('besdi');
+const practice=[
+['Pembukaan','Kamu berdiri di depan siswa. Sapa mereka dengan ramah, sebutkan asal tim, dan jelaskan tujuan kunjungan.','“Assalamu’alaikum, selamat pagi teman-teman! Kami dari SMP–SMA Hasanuddin. Hari ini kami ingin berbagi cerita tentang kegiatan belajar dan pengalaman di sekolah kami.”'],
+['Ice breaking','Siswa terlihat masih malu-malu. Ajak mereka melakukan aktivitas singkat yang mudah diikuti.','“Biar lebih semangat, kalau saya bilang Hasanuddin, teman-teman jawab Terdepan dan Berprestasi! Kita coba, ya!”'],
+['Mengenalkan Hasanuddin','Ceritakan pengalaman belajar, kegiatan, dan pembiasaan positif dengan bahasa yang mudah dimengerti.','“Di Hasanuddin, kita belajar pelajaran sekolah, membiasakan ibadah, belajar mandiri dan disiplin, serta mengembangkan kemampuan melalui berbagai kegiatan.”'],
+['Mengajak mengisi angket','Bagikan angket dan jelaskan bahwa siswa perlu mengisinya sesuai pilihan sendiri.','“Silakan isi angket ini dengan jujur sesuai pilihan kalian. Kalau ada pertanyaan yang belum dipahami, kami siap membantu.”'],
+['Penutupan','Akhiri kegiatan dengan ucapan terima kasih dan ajakan mengenal sekolah lebih lanjut.','“Terima kasih sudah mengikuti kegiatan hari ini. Senang sekali kami bisa bertemu teman-teman. Semoga suatu saat kita bisa bertemu lagi di Hasanuddin.”']
+];let pIndex=0;
+function drawPractice(){let p=practice[pIndex];document.getElementById('practiceLabel').textContent='TAHAP '+String(pIndex+1).padStart(2,'0');document.getElementById('practiceTitle').textContent=p[0];document.getElementById('practiceDesc').textContent=p[1];document.getElementById('practiceExample').textContent=p[2];document.getElementById('practiceCount').textContent=`Tahap ${pIndex+1} dari ${practice.length}`;document.getElementById('practiceBar').style.width=((pIndex+1)/practice.length*100)+'%';document.getElementById('prevStep').disabled=pIndex===0;document.getElementById('nextStep').textContent=pIndex===practice.length-1?'Ulangi dari awal ↻':'Berikutnya →'}
+function changePractice(n){pIndex=(pIndex+n+practice.length)%practice.length;drawPractice()}drawPractice();
+const checkData={
+before:['Koordinator mengingatkan jadwal dan lokasi kunjungan.','Surat izin BESDI dibuat satu jam sebelum berangkat.','Guru presenter sudah dikonfirmasi dan siap bertugas.','Laptop, charger, proyektor, speaker, dan kabel tersedia.','File presentasi dan video dapat dibuka dan diputar.','Surat, SPPD, flyer, angket, alat tulis, dan cendera mata siap.','Seluruh anggota mengetahui waktu dan lokasi keberangkatan.'],
+arrive:['Guru presenter melapor ke kantor sekolah tujuan.','Tim memperkenalkan diri dan meminta izin kegiatan.','Tim BESDI menyiapkan perangkat di aula/kelas.','Tampilan proyektor dan suara speaker sudah diuji.'],
+present:['Presenter BESDI membuka kegiatan dan memperkenalkan diri.','Ice breaking dilakukan untuk membangun suasana.','Video pengenalan Hasanuddin diputar.','Guru menyampaikan materi sekolah, biaya, dan beasiswa.','Siswa diarahkan mengisi angket sampai selesai.','Guru mencatat siswa peringkat 1, 2, dan 3 (khusus SMP).','Apresiasi/hadiah diberikan dan kegiatan ditutup.','Foto bersama dilakukan jika diizinkan.'],
+after:['Tim berpamitan ke kantor sekolah.','Cendera mata diserahkan kepada pihak sekolah.','Seluruh perlengkapan dikumpulkan dan diperiksa.'],
+return:['Perlengkapan dikembalikan ke tempat semula.','Angket diserahkan kepada TU.','Guru presenter mengirim laporan ke grup WhatsApp P2B.']
+};
+function loadChecks(){Object.entries(checkData).forEach(([group,items])=>{let box=document.getElementById('checks-'+group);box.innerHTML=items.map((item,i)=>{let id=group+'-'+i;let done=localStorage.getItem('pm-'+id)==='1';return `<label class="check-row ${done?'done':''}"><input type="checkbox" data-check="${id}" ${done?'checked':''}><span>${item}</span></label>`}).join('')});document.querySelectorAll('[data-check]').forEach(c=>c.addEventListener('change',()=>{localStorage.setItem('pm-'+c.dataset.check,c.checked?'1':'0');c.parentElement.classList.toggle('done',c.checked);updateProgress()}));updateProgress()}
+function updateProgress(){let total=Object.values(checkData).flat().length;let done=document.querySelectorAll('[data-check]:checked').length;let pct=Math.round(done/total*100);['checkPercent','homeProgress','homePct'].forEach(id=>{let el=document.getElementById(id);if(el)el.textContent=pct+'%'});['checkBar','homeBar'].forEach(id=>{let el=document.getElementById(id);if(el)el.style.width=pct+'%'});let a=document.getElementById('checkDone');if(a)a.textContent=done+' selesai';let b=document.getElementById('checkTotal');if(b)b.textContent=total+' tugas';let c=document.getElementById('homeCount');if(c)c.textContent=done+' dari '+total+' tugas selesai'}
+function resetChecks(){if(!confirm('Reset semua checklist pada perangkat ini?'))return;Object.keys(checkData).forEach(g=>checkData[g].forEach((_,i)=>localStorage.removeItem('pm-'+g+'-'+i)));loadChecks()}
+loadChecks();
+function reportNumber(id){const raw=document.getElementById(id).value.trim();if(raw==='')return null;const n=Number(raw);return Number.isSafeInteger(n)&&n>=0?n:null}
+function updateReportTotal(){const present=reportNumber('rPresent');const absent=reportNumber('rAbsent');const total=present===null||absent===null?null:present+absent;document.getElementById('rTotal').value=total===null?'—':total+' siswa'}
+['rPresent','rAbsent'].forEach(id=>document.getElementById(id).addEventListener('input',updateReportTotal));
+function formatReportDate(value){if(!value)return '-';const parts=value.split('-').map(Number);if(parts.length!==3||parts.some(n=>!Number.isInteger(n)))return '-';const date=new Date(parts[0],parts[1]-1,parts[2]);return new Intl.DateTimeFormat('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(date)}
+function makeReport(){
+ const val=id=>document.getElementById(id).value.trim();
+ const school=val('rSchool');
+ const date=val('rDate');
+ const level=val('rLevel');
+ const present=reportNumber('rPresent');
+ const absent=reportNumber('rAbsent');
+ const interested=reportNumber('rInterested');
+ const status=document.getElementById('copyStatus');
+ if(!school){status.textContent='Nama sekolah tujuan perlu diisi.';document.getElementById('rSchool').focus();return}
+ if(!date){status.textContent='Tanggal kunjungan perlu diisi.';document.getElementById('rDate').focus();return}
+ if(present===null||absent===null||interested===null){status.textContent='Isi jumlah siswa hadir, tidak hadir, dan berminat dengan angka 0 atau lebih.';return}
+ const total=present+absent;
+ if(!Number.isSafeInteger(total)){status.textContent='Jumlah siswa keseluruhan terlalu besar. Periksa kembali angka yang dimasukkan.';return}
+ if(interested>total){status.textContent='Jumlah siswa berminat tidak boleh melebihi jumlah siswa keseluruhan.';document.getElementById('rInterested').focus();return}
+ const achievementNames=val('rAchieve').split(/[,;\n]+/).map(name=>name.trim()).filter(Boolean);
+ const maxNames=level==='SD/MI'?3:1;
+ if(achievementNames.length>maxNames){status.textContent=level==='SD/MI'?'Untuk SD/MI, maksimal masukkan 3 nama siswa (peringkat 1, 2, dan 3).':'Untuk SMP/MTs, masukkan 1 nama siswa saja (peringkat 1).';document.getElementById('rAchieve').focus();return}
+ const notes=val('rNotes');
+ const follow=val('rFollow');
+ const lines=[
+  'Assalamu’alaikum Wr. Wb.',
+  '',
+  `Mohon izin menyampaikan laporan hasil kunjungan presentasi P2B di *${school}*`,
+  formatReportDate(date),
+  '',
+  '*01 | DATA SISWA*',
+  `Total siswa : ${total}`,
+  `Hadir            : ${present}`,
+  `Tidak hadir  : ${absent}`,
+  '',
+  '*02 | HASIL ANGKET*',
+  `Siswa berminat : *${interested} siswa*`,
+  '',
+  `*03 | PRESTASI SISWA (KHUSUS ${level})*`,
+  ...(achievementNames.length?achievementNames.map((name,index)=>`${index+1}. ${name}`):[]),
+  '',
+  '*04 | CATATAN KUNJUNGAN*',
+  notes,
+  '',
+  '*05 | KENDALA & TINDAK LANJUT*',
+  follow,
+  '',
+  'Demikian laporan hasil kunjungan ini kami sampaikan.',
+  'Terima kasih 🙏🏻🙏🏻'
+ ];
+ const report=lines.join('\n');
+ document.getElementById('reportOutput').textContent=report;
+ status.textContent='Laporan berhasil disusun. Periksa kembali sebelum dibagikan ke grup WhatsApp.';
+}
+function resetReport(){
+ if(!confirm('Kosongkan seluruh isian laporan untuk kunjungan berikutnya?'))return;
+ ['rSchool','rDate','rPresent','rAbsent','rInterested','rAchieve','rNotes','rFollow'].forEach(id=>document.getElementById(id).value='');
+ updateReportTotal();
+ document.getElementById('reportOutput').textContent='Laporan akan muncul di sini setelah data diisi dan tombol “Susun laporan” ditekan.';
+ document.getElementById('copyStatus').textContent='Formulir telah dikosongkan.';
+}
+function copyText(t){navigator.clipboard?.writeText(t).then(()=>alert('Teks berhasil disalin.')).catch(()=>alert('Silakan salin teks secara manual.'))}
+function shareReport(){
+ const output=document.getElementById('reportOutput');
+ const status=document.getElementById('copyStatus');
+ const text=output.textContent;
+ if(text.startsWith('Laporan akan')){status.textContent='Susun laporan terlebih dahulu sebelum membagikannya.';return}
+ const url='https://api.whatsapp.com/send?text='+encodeURIComponent(text);
+ const opened=window.open(url,'_blank','noopener,noreferrer');
+ if(opened){status.textContent='WhatsApp dibuka. Pilih grup P2B, periksa pesan, lalu tekan Kirim.'}
+ else{status.textContent='Browser memblokir jendela WhatsApp. Izinkan pop-up, lalu tekan tombol Bagikan ke Grup WhatsApp sekali lagi.'}
+}
+</script>
+</body></html>
